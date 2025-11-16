@@ -9,7 +9,7 @@
     <h1 class="heading">Select Movie</h1>
     {%for data in movie_list :%}
   <p>
-      <a href="#"> {{data.original_title}} - {{data.release_date}}</a>
+      <a href="{{url_for('get_movie',id=data.id)}}"> {{data.original_title}} - {{data.release_date}}</a>
   </p>
     {%endfor%}
 </div>
