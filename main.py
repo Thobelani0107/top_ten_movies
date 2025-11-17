@@ -113,9 +113,7 @@ def get_movie():
                         img_url=img_url,ratings=0,rankings=0,reviews='')
         db.session.add(new_movie)
         db.session.commit()
-        return redirect(url_for('home'))
-
-
+        return redirect(url_for('edit',id=new_movie.id))
 
 
 
