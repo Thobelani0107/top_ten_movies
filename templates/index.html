@@ -7,25 +7,25 @@
   <h1 class="heading">My Top 10 Movies</h1>
   <p class="description">These are my all-time favourite movies.</p>
 
-   {% for all_book in all_books%}
+   {% for all_movie in all_movies%}
   <div class="card" >
-    <div class="front" style="background-image: url({{all_book.img_url}});">
-        <p class="large">{{all_book.rankings}}</p>
+    <div class="front" style="background-image: url({{all_movie.img_url}});">
+        <p class="large">{{all_movie.rankings}}</p>
     </div>
     <div class="back">
       <div>
-    <div class="title">{{all_book.title}} <span class="release_date">({{all_book.year}})</span></div>
+    <div class="title">{{all_movie.title}} <span class="release_date">({{all_movie.year}})</span></div>
         <div class="rating">
-            <label>{{all_book.ratings}}</label>
+            <label>{{all_movie.ratings}}</label>
           <i class="fas fa-star star"></i>
         </div>
-          <p class="review">"{{all_book.reviews}}"</p>
+          <p class="review">"{{all_movie.reviews}}"</p>
         <p class="overview">
-            {{all_book.description}}
+            {{all_movie.description}}
         </p>
 
-        <a href="{{url_for('edit',id=all_book.id)}}" class="button">Update</a>
-        <a href="{{url_for('delete',id=all_book.id)}}" class="button delete-button">Delete</a>
+        <a href="{{url_for('edit',id=all_movie.id)}}" class="button">Update</a>
+        <a href="{{url_for('delete',id=all_movie.id)}}" class="button delete-button">Delete</a>
 
       </div>
     </div>
